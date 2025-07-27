@@ -39,7 +39,7 @@ export default function ForgotPassword() {
 
   return (
     <div className={`flex items-center justify-center flex-col pt-[55px] pb-7`}>
-      <div className="w-full max-w-sm rounded-lg p-6 shadow dark:shadow-white">
+      <div className="text-center rounded max-w-[400px] w-full p-6">
         <h1 className="text-xl font-bold mb-4 text-center">
           Reset Your Password
         </h1>
@@ -47,7 +47,7 @@ export default function ForgotPassword() {
           onSubmit={handleChangePassword}
           className="flex flex-col items-center flex-wrap gap-5 "
         >
-          <div className="flex flex-col gap-5 items-center justify-center">
+          <div className="flex flex-col gap-5 items-center justify-center w-full">
             <input
               required
               id="email"
@@ -56,8 +56,8 @@ export default function ForgotPassword() {
               onChange={(e) =>
                 setUserInfo({ ...userInfo, email: e.target.value })
               }
-              placeholder="johndoe123@gmail.com"
-              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[220px]"
+              placeholder="Email"
+              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[220px] w-full"
             />
 
             <input
@@ -68,7 +68,7 @@ export default function ForgotPassword() {
               value={oldPassword}
               onChange={(e) => setOldPassword(e.target.value)}
               placeholder="Old Password"
-              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 text-base font-medium text-[gray] outline-none max-w-[220px]"
+              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 text-base font-medium text-[gray] outline-none max-w-[220px] w-full"
             />
 
             <input
@@ -79,7 +79,7 @@ export default function ForgotPassword() {
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               placeholder="New Password"
-              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 text-base font-medium text-[gray] outline-none max-w-[220px]"
+              className="rounded-md border border-[#6d6d6d] bg-white py-2 px-3 text-base font-medium text-[gray] outline-none max-w-[220px] w-full"
             />
           </div>
           {errors && (

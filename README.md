@@ -1,6 +1,6 @@
 # 🛒 ZippyCart
 
-ZippyCart is a modern online shopping website built with **React**, **Vite**, and **Tailwind CSS**. It offers a clean, responsive UI and features like product browsing, cart management, and user authentication (coming soon).
+ZippyCart is a modern online shopping website built with React, Vite, and Tailwind CSS. It offers a clean, responsive UI and features like product browsing, cart management, and user authentication (coming soon).
 
 ---
 
@@ -19,11 +19,11 @@ ZippyCart is a modern online shopping website built with **React**, **Vite**, an
 
 ## 🚀 Tech Stack
 
-- **React** (frontend)
-- **Vite** (build tool)
-- **Tailwind CSS** (styling)
-- **React Router** (routing)
-- **LocalStorage** (cart persistence)
+- React (frontend)
+- Vite (build tool)
+- Tailwind CSS (styling)
+- React Router (routing)
+- LocalStorage (cart persistence)
 
 ---
 

@@ -9,7 +9,7 @@ const Hero = () => {
         </h1>
       </div>
       <div>
-        <p className="text-base md:text-lg leading-relaxed text-gray-600 dark:text-[#c0c0c0]">
+        <p className="text-base md:text-lg text-gray-600 dark:text-[#c0c0c0] tracking-wide leading-6">
           ZippyCart is like having your favorite store in your pocket and on the
           internet. It brings the world of online shopping right to your
           fingertips, making it easier than ever to find and purchase the things
@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <Link
           to="/shop"
-          className="inline-block transition hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-2"
+          className="inline-block transition hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-4"
         >
           Start Shopping
         </Link>

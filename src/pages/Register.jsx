@@ -62,7 +62,7 @@ export default function Register() {
 
   return (
     <main className="flex items-center justify-center pt-[55px] pb-7 ">
-      <div className="text-center rounded max-w-[400px] w-full shadow dark:shadow-white p-6">
+      <div className="text-center rounded max-w-[400px] w-full p-6">
         <div className="text-lg font-bold mb-4 gap-1 flex flex-col">
           <p>Create a New Account</p>
           <div className="flex justify-center gap-2">

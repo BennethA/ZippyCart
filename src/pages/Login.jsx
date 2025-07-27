@@ -21,22 +21,19 @@ export default function Login() {
       if (foundUser) {
         setUserInfo(foundUser);
         setErrors("");
-        alert("Login successfull!");
         setLogIn(true);
         navigate("/shop");
       } else {
-        alert("User not found!");
         setErrors("User not found");
       }
     } else {
-      alert("No registered users. Create a new account and try again!");
       setErrors("No registered users. Create a new account and try again.");
     }
   };
 
   return (
     <main className={`flex items-center justify-center pt-[75px]`}>
-      <div className="w-full max-w-sm mx-auto rounded-lg shadow dark:shadow-white p-6">
+      <div className="text-center rounded max-w-[400px] w-full p-6">
         <h1 className="text-2xl font-bold mb-1 dark:text-white text-center">
           Welcome 👋
         </h1>
@@ -48,7 +45,7 @@ export default function Login() {
           onSubmit={handleSubmit}
           className="flex flex-col flex-wrap items-center justify-center gap-5"
         >
-          <div className="flex flex-col gap-5 items-center justify-center">
+          <div className="flex flex-col gap-5 items-center justify-center w-full">
             <input
               required
               id="email"
@@ -60,7 +57,7 @@ export default function Login() {
                 setErrors("");
                 setUserInfo({ ...userInfo, email: event.target.value });
               }}
-              className="w-full rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[300px] focus:border-blue-500 focus:ring-1 focus:ring-blue-300"
+              className="w-full rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[220px] focus:border-blue-500 focus:ring-1 focus:ring-blue-300"
             />
             <input
               required
@@ -73,7 +70,7 @@ export default function Login() {
               onChange={(event) =>
                 setUserInfo({ ...userInfo, password: event.target.value })
               }
-              className="w-full rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[300px] focus:border-blue-500 focus:ring-1 focus:ring-blue-300"
+              className="w-full rounded-md border border-[#6d6d6d] bg-white py-2 px-3 font-medium text-[gray] outline-none max-w-[220px] focus:border-blue-500 focus:ring-1 focus:ring-blue-300"
             />
           </div>
 
