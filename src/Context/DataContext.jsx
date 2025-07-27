@@ -6,14 +6,9 @@ const DataContext = createContext({});
 
 export function DataProvider({ children }) {
   const [userInfo, setUserInfo] = useState({
-    country: "",
-    countryCode: "",
-    city: "",
     name: "",
     email: "",
     password: "",
-    phoneCode: "",
-    phoneNumber: "",
   });
   const [cart, setCart] = useState([]);
   const [errors, setErrors] = useState("");

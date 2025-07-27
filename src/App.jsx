@@ -6,6 +6,10 @@ import About from "./pages/About";
 import ContactUs from "./pages/Contact-Us";
 import ErrorPage from "./pages/Error-Page";
 import Login from "./pages/Login";
+import Register from "./pages/Register";
+import ForgotPassword from "./pages/Forgot-Password";
+import UserInformation from "./pages/User-Information";
+import Orders from "./pages/Orders";
 
 export default function App() {
   return (
@@ -20,6 +24,10 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contactUs" element={<ContactUs />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/userInformation" element={<UserInformation />} />
+          <Route path="/orders" element={<Orders />} />
         </Routes>
       </div>
       <Footer />

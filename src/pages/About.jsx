@@ -28,7 +28,7 @@ const About = () => {
         {whyUs.map((item, index) => (
           <div
             key={index}
-            className="w-[300px] rounded-md p-4 shadow-md dark:shadow-white"
+            className="w-[300px] rounded-md p-4 shadow dark:shadow-white"
           >
             <h2 className="mb-2 font-bold">{item.title}</h2>
             <p className="text-sm text-gray-600 dark:text-[#c0c0c0]">

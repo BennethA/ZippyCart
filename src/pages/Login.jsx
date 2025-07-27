@@ -36,8 +36,8 @@ export default function Login() {
 
   return (
     <main className={`flex items-center justify-center pt-[75px]`}>
-      <div className="w-full max-w-sm mx-auto rounded-lg shadow-lg dark:shadow-white p-6">
-        <h1 className="text-2xl font-bold mb-2 dark:text-white text-center">
+      <div className="w-full max-w-sm mx-auto rounded-lg shadow dark:shadow-white p-6">
+        <h1 className="text-2xl font-bold mb-1 dark:text-white text-center">
           Welcome 👋
         </h1>
         <p className="text-gray-600 dark:text-[#c0c0c0] mb-4 text-center">
@@ -88,14 +88,14 @@ export default function Login() {
           </div>
 
           {errors && (
-            <div className="text-red-600 font-semibold text-center leading-4">
+            <p className="text-red-600 font-semibold text-center leading-4">
               {errors}
-            </div>
+            </p>
           )}
 
           <button
             type="submit"
-            className="rounded-sm py-2 px-6 font-semibold outline-none transition duration-300 bg-black text-white hover:bg-gray-800 dark:bg-[#c0c0c0] dark:text-black dark:hover:bg-black dark:hover:text-white"
+            className="hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-2"
           >
             Login
           </button>

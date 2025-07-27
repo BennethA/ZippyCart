@@ -7,10 +7,12 @@ ZippyCart is a modern online shopping website built with **React**, **Vite**, an
 ## 📦 Features
 
 - 🏠 Home page with hero and services section
-- 🛍️ Product listing and filtering (coming soon)
+- 🛍️ Product listing and filtering (Coming soon)
 - 🛒 Add to cart & remove from cart
+- 🤳 Order page
 - 🔍 Search bar
 - 🌙 Light/Dark mode toggle
+- ✅ Login, Register and Forgot Password pages (Verification coming soon)
 - 📱 Fully responsive design
 
 ---
@@ -29,10 +31,10 @@ ZippyCart is a modern online shopping website built with **React**, **Vite**, an
 
 ```bash
 # Clone the repo
-git clone https://github.com/yourusername/zippycart.git
+git clone https://github.com/BennethA/ZippyCart.git
 
 # Navigate into it
-cd zippycart
+cd ZippyCart
 
 # Install dependencies
 npm install

@@ -4,7 +4,7 @@ const Services = ({ services }) => {
       {services.map((service) => (
         <article
           key={service.id}
-          className="w-[250px] border-2 dark:border-gray-300 rounded-md p-4 hover:shadow-md transition"
+          className="w-[250px] border-2 dark:border-gray-300 rounded-md p-4 hover:shadow dark:shadow-white transition"
         >
           <h3 className="font-semibold text-lg text-center mb-2">
             {service.name}
