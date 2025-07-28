@@ -12,7 +12,7 @@ export default function ForgotPassword() {
 
   const handleChangePassword = (e) => {
     e.preventDefault();
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10,}$/;
     const registeredUsers = localStorage.getItem("registeredUsers");
 
     if (registeredUsers) {
@@ -30,9 +30,11 @@ export default function ForgotPassword() {
         setOldPassword("");
         setNewPassword("");
       } else if (!passwordRegex.test(newPassword)) {
-        setErrors("Type a valid new password");
+        setErrors(
+          "Invalid password(Include capital and small letters, numbers, special characters and must be at least 10 characters long."
+        );
       } else {
-        setErrors("User not found");
+        setErrors("User not found!");
       }
     }
   };

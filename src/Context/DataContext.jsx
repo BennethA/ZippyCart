@@ -12,9 +12,8 @@ export function DataProvider({ children }) {
   });
   const [cart, setCart] = useState([]);
   const [errors, setErrors] = useState("");
-  const [filter, setFilter] = useState("");
+  const [filter, setFilter] = useState("All");
   const [logIn, setLogIn] = useState(false);
-  const [sortType, setSortType] = useState("random");
   const [openSearch, setOpenSearch] = useState(false);
   const [prevPageNumber, setPrevPageNumber] = useState(0);
   const [nextPageNumber, setNextPageNumber] = useState(15);
@@ -81,6 +80,9 @@ export function DataProvider({ children }) {
 
   const categories = [
     {
+      name: "All",
+    },
+    {
       name: "Male",
     },
     {
@@ -129,6 +131,7 @@ export function DataProvider({ children }) {
       name: "Gown",
     },
   ];
+  // localStorage.clear()
   return (
     <DataContext.Provider
       value={{
@@ -153,8 +156,6 @@ export function DataProvider({ children }) {
         setOpenPurchase,
         errors,
         setErrors,
-        sortType,
-        setSortType,
         prevPageNumber,
         setPrevPageNumber,
         nextPageNumber,

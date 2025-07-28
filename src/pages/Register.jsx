@@ -14,22 +14,22 @@ export default function Register() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const nameRegex = /^[a-zA-Z ]{5,10}$/;
+    const nameRegex = /^[a-zA-Z]+$/;
     const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10}$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{10,}$/;
 
     // Validations
     if (!nameRegex.test(name)) {
-      setErrors("Name must be at least 5 characters.");
+      setErrors("Name must be at least 5 characters short.");
       return;
     }
     if (!emailRegex.test(email)) {
-      setErrors("Please enter a valid email.");
+      setErrors("Please enter a valid Gmail.");
       return;
     }
     if (!passwordRegex.test(password)) {
       setErrors(
-        "Invalid password(Include capital and small letters, numbers, special characters and must be 15 letters long."
+        "Invalid password(Include capital and small letters, numbers, special characters and must be at least 10 characters long."
       );
       return;
     }
@@ -80,6 +80,7 @@ export default function Register() {
             type="text"
             placeholder="Name"
             value={name}
+            maxLength={"15"}
             onChange={(e) => setName(e.target.value)}
             className="w-full rounded-md border border-gray-400 py-2 px-3 font-medium text-gray-600 outline-none max-w-[220px]"
           />
@@ -96,6 +97,7 @@ export default function Register() {
             type="password"
             placeholder="Password"
             value={password}
+            minLength={"10"}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full rounded-md border border-gray-400 py-2 px-3 font-medium text-gray-600 outline-none max-w-[220px]"
           />

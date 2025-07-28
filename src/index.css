@@ -18,3 +18,15 @@
   font-style: normal;
   font-family: "Prata", serif;
 } 
+
+.my-scrollbar::-webkit-scrollbar {
+  height: 15px;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.my-scrollbar::-webkit-scrollbar-track {
+  background: white;
+}
