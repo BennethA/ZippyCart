@@ -11,6 +11,9 @@ import ForgotPassword from "./pages/Forgot-Password";
 import UserInformation from "./pages/User-Information";
 import Orders from "./pages/Orders";
 import Shop from "./pages/Shop";
+import Cart from "./pages/Cart";
+import Product from "./pages/Product-Information";
+import PlaceOrder from "./pages/Place-Order";
 
 export default function App() {
   return (
@@ -30,6 +33,9 @@ export default function App() {
           <Route path="/userInformation" element={<UserInformation />} />
           <Route path="/orders" element={<Orders />} />
           <Route path="/shop" element={<Shop />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/productInformation/:id" element={<Product />} />
+          <Route path="/placeOrder" element={<PlaceOrder />} />
         </Routes>
       </div>
       <Footer />

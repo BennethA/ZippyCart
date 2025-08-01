@@ -20,6 +20,10 @@ export function DataProvider({ children }) {
   const [openPurchase, setOpenPurchase] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
 
+  const [orders, setOrders] = useState(
+    JSON.parse(localStorage.getItem("orders")) || []
+  );
+
   const storedCart = localStorage.getItem("cart");
   const existingCart = storedCart ? JSON.parse(storedCart) : [];
 
@@ -135,6 +139,8 @@ export function DataProvider({ children }) {
   return (
     <DataContext.Provider
       value={{
+        orders,
+        setOrders,
         userInfo,
         setUserInfo,
         socials,

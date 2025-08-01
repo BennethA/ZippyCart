@@ -53,10 +53,8 @@ export default function Register() {
 
     // Save in context too if needed
     setUserInfo(newUser);
-    alert("Log in successfull!")
     setLogIn(true);
     setErrors("");
-
     navigate("/shop");
   };
 

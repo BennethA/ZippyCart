@@ -24,10 +24,10 @@ export default function Login() {
         setLogIn(true);
         navigate("/shop");
       } else {
-        setErrors("User not found");
+        setErrors("User not found!");
       }
     } else {
-      setErrors("No registered users. Create a new account and try again.");
+      setErrors("User not found!");
     }
   };
 
