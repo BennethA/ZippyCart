@@ -18,7 +18,7 @@ export default function Product() {
       <div className="pt-[55px] px-4 text-center">
         <Back />
         <Title text1="PRODUCT" text2="NOT FOUND" />
-        <p className="text-lg text-gray-600 font-bold">
+        <p className="text-lg font-bold">
           Sorry, we couldn’t find this product.
         </p>
       </div>
@@ -27,8 +27,8 @@ export default function Product() {
 
   return (
     <div>
-          <CartLink />
       <Back />
+      <CartLink />
       <main className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] pt-[55px] flex flex-col gap-5 pb-12">
         <Title text1="PRODUCT" text2="DETAILS" />
 
@@ -37,7 +37,7 @@ export default function Product() {
             loading="lazy"
             src={product.image_url}
             alt={product.name}
-            className="rounded-md max-h-[500px] object-contain"
+            className="max-h-[500px] object-contain"
           />
         </div>
 

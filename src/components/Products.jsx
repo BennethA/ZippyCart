@@ -4,7 +4,6 @@ import DataContext from "../Context/DataContext";
 import { Link, useNavigate } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import CartLink from "/src/components/Cart-Link.jsx";
-import OrdersLink from "./Orders-Link";
 
 export default function Products() {
   const {
@@ -28,7 +27,7 @@ export default function Products() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setImageLoaded(true);
-    }, 1000);
+    }, 100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -68,7 +67,6 @@ export default function Products() {
   return (
     <div>
       <CartLink />
-      <OrdersLink />
       <main className="flex sm:gap-8 gap-3 flex-wrap justify-center mt-7">
         {filteredProducts
           .slice(prevPageNumber, nextPageNumber)
@@ -80,7 +78,7 @@ export default function Products() {
               <Link to={`/productInformation/${product.id}`}>
                 <div
                   className={`h-[250px] overflow-hidden flex items-center mb-1 bg-white ${
-                    !imageLoaded && "animate-pulse blur-[5px] bg-gray-100"
+                    !imageLoaded && "blur-[5px]"
                   }`}
                 >
                   <img

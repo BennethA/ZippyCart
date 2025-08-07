@@ -9,7 +9,7 @@ export default function ContactUs() {
     <div className="pt-[45px] gap-5 flex flex-col bg-center bg-cover mb-5 px-4 sm:px-[10vw]">
       <Title text1="CONTACT" text2="US" />
       <div className="flex flex-wrap justify-between gap-4">
-        <div className="flex flex-col justify-center items-center gap-3 w-full sm:w-[45%] p-4 rounded-lg text-lg shadow dark:shadow-white">
+        <div className="flex flex-col justify-center items-center gap-3 w-full sm:w-[45%] p-4 rounded-lg text-lg hover:shadow dark:shadow-white border-2">
           <div>
             <p className="font-bold">Our Store</p>
             <div className="text-gray-600 dark:text-[#c0c0c0]">

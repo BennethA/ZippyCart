@@ -63,7 +63,7 @@ export default function PlaceOrder() {
       const updatedOrders = [...orders, newOrder];
       localStorage.setItem("orders", JSON.stringify(updatedOrders));
       setOrders(updatedOrders);
-      setCart([]); // clear cart
+      setCart([]);
 
       navigate("/orders");
     }

@@ -64,9 +64,9 @@ export default function ForgotPassword() {
 
             <input
               required
-              maxLength="15"
-              type="password"
               id="oldPassword"
+              minLength="10"
+              type="password"
               value={oldPassword}
               onChange={(e) => setOldPassword(e.target.value)}
               placeholder="Old Password"
@@ -76,7 +76,7 @@ export default function ForgotPassword() {
             <input
               required
               id="newPassword"
-              maxLength="15"
+              minLength="10"
               type="password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
@@ -92,7 +92,7 @@ export default function ForgotPassword() {
 
           <button
             type="submit"
-            className="hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-2"
+            className="hover:opacity-80 rounded-md bg-gradient-to-r from-gray-900 to-gray-500 py-2 px-6 font-semibold text-white outline-none mt-2"
           >
             Reset Password
           </button>

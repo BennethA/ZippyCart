@@ -2,13 +2,14 @@ import { useContext } from "react";
 import Title from "../components/Title";
 import DataContext from "../Context/DataContext";
 import CartLink from "../components/Cart-Link";
+import Back from "../components/Back";
 
 export default function Orders() {
-  // Get orders from DataContext
   const { orders } = useContext(DataContext);
 
   return (
     <>
+      <Back />
       <CartLink />
       <div className="px-4 sm:p-[5vw] md:px-[7vw] lg:px-[9vw] pt-[55px] pb-7">
         <Title text1="YOUR" text2="ORDERS" />

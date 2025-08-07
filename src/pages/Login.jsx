@@ -62,7 +62,7 @@ export default function Login() {
             <input
               required
               id="password"
-              maxLength="15"
+              minLength="10"
               type="password"
               autoComplete="current-password"
               value={userInfo.password}
@@ -92,7 +92,7 @@ export default function Login() {
 
           <button
             type="submit"
-            className="hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-2"
+            className="hover:opacity-80 rounded-md bg-gradient-to-r from-gray-900 to-gray-500 py-2 px-6 font-semibold text-white outline-none mt-2"
           >
             Login
           </button>

@@ -51,7 +51,6 @@ export default function Register() {
       JSON.stringify([...registeredUsers, newUser])
     );
 
-    // Save in context too if needed
     setUserInfo(newUser);
     setLogIn(true);
     setErrors("");
@@ -78,7 +77,8 @@ export default function Register() {
             type="text"
             placeholder="Name"
             value={name}
-            maxLength={"15"}
+            minLength="5"
+            maxLength="15"
             onChange={(e) => setName(e.target.value)}
             className="w-full rounded-md border border-gray-400 py-2 px-3 font-medium text-gray-600 outline-none max-w-[220px]"
           />
@@ -95,7 +95,7 @@ export default function Register() {
             type="password"
             placeholder="Password"
             value={password}
-            minLength={"10"}
+            minLength="10"
             onChange={(e) => setPassword(e.target.value)}
             className="w-full rounded-md border border-gray-400 py-2 px-3 font-medium text-gray-600 outline-none max-w-[220px]"
           />
@@ -108,7 +108,7 @@ export default function Register() {
 
           <button
             type="submit"
-            className="hover:opacity-80 rounded-md bg-[#6d6d6d] py-2 px-6 font-semibold text-white outline-none mt-2"
+            className="hover:opacity-80 rounded-md bg-gradient-to-r from-gray-900 to-gray-500 py-2 px-6 font-semibold text-white outline-none mt-2"
           >
             Register
           </button>
