@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import TopbarNav from "./Topbar-Nav";
 import SidebarNav from "./Sidebar-Nav";
@@ -14,10 +14,16 @@ import { BsCart } from "react-icons/bs";
 export default function Navigation() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [openMenu, setOpenMenu] = useState(false);
 
-  const { logIn, openSearch, setOpenSearch, darkMode, setDarkMode } =
-    useContext(DataContext);
+  const {
+    logIn,
+    openSearch,
+    setOpenSearch,
+    darkMode,
+    setDarkMode,
+    openMenu,
+    setOpenMenu,
+  } = useContext(DataContext);
 
   const handleOpenMenu = () => setOpenMenu(!openMenu);
 
@@ -56,7 +62,7 @@ export default function Navigation() {
         </ul>
 
         <ul
-          className={`sm:hidden fixed transition-all duration-500 top-[54px] translate-x-[-100%] left-0 w-[270px] px-[30px] py-[20px] text-[17px] font-semibold overflow-y-auto bg-white dark:bg-black border-gray-300 border-r-2 bottom-0 scrollbar scrollbar-thumb-black ${
+          className={`sm:hidden fixed transition-all duration-500 top-[56px] translate-x-[-100%] left-0 w-[270px] px-[30px] py-[10px] text-[17px] font-semibold overflow-y-auto bg-white dark:bg-black border-gray-300 border-r-2 bottom-0 scrollbar scrollbar-thumb-black ${
             openMenu ? "translate-x-[0%]" : ""
           }`}
         >

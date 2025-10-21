@@ -14,10 +14,28 @@ import Shop from "./pages/Shop";
 import Cart from "./pages/Cart";
 import Product from "./pages/Product-Information";
 import PlaceOrder from "./pages/Place-Order";
+import DataContext from "./Context/DataContext";
+import { useContext, useEffect } from "react";
 
 export default function App() {
+  const { openMenu, setOpenMenu } = useContext(DataContext);
+  useEffect(() => {
+    if (openMenu) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    // Clean up when component unmounts
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [openMenu]);
   return (
-    <div className="flex flex-col min-h-screen dark:bg-black dark:text-white">
+    <div
+      className="flex flex-col min-h-screen dark:bg-black dark:text-white"
+      onClick={() => openMenu && setOpenMenu(false)}
+    >
       <Navigations />
       <div
         className={`flex-grow px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] h-full`}

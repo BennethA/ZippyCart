@@ -19,6 +19,7 @@ export function DataProvider({ children }) {
   const [nextPageNumber, setNextPageNumber] = useState(15);
   const [openPurchase, setOpenPurchase] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
 
   const [orders, setOrders] = useState(
     JSON.parse(localStorage.getItem("orders")) || []
@@ -138,7 +139,7 @@ export function DataProvider({ children }) {
   // localStorage.clear()
   return (
     <DataContext.Provider
-      value={{
+      value={{openMenu, setOpenMenu,
         orders,
         setOrders,
         userInfo,
