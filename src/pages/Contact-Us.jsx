@@ -26,7 +26,7 @@ export default function ContactUs() {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex transition-all duration-200 hover:opacity-80 items-center gap-2 hover:text-blue-700"
+                  className="flex hover:opacity-80 items-center gap-2 hover:text-blue-700"
                 >
                   {social.icon}
                   <span>{social.name}</span>

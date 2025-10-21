@@ -99,7 +99,7 @@ export default function PlaceOrder() {
       <button
         disabled={!selectedPayment}
         onClick={handlePurchase}
-        className={`border-2 px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white transition dark:hover:bg-white dark:hover:text-black ${
+        className={`border-2 px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black ${
           selectedPayment
             ? "hover:bg-black hover:text-white"
             : "opacity-50 cursor-not-allowed"

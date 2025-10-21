@@ -8,7 +8,7 @@ export default function PaymentOption({
   return (
     <button
       onClick={() => setSelectedPayment(option)}
-      className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-200 ${
+      className={`flex items-center gap-2 px-4 py-2 rounded-md ${
         isSelected ? "dark:border-white border-black border-2" : "hover:opacity-80 border-2 border-gray-300 dark:border-gray-600"
       }`}
     >

@@ -7,10 +7,10 @@
 * {
   margin: 0;
   padding: 0;
-  transition: all;
+  /* transition: all; */
   font-family: "Outfit";
   box-sizing: border-box;
-  transition-duration: 0.1s;
+  /* transition-duration: 0.1s; */
 }*/
 
 #prata-regular {

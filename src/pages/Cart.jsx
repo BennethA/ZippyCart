@@ -69,7 +69,7 @@ export default function Cart() {
               onClick={() => {
                 logIn ? navigate("/placeOrder") : navigate("/login");
               }}
-              className="border-2 px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white transition dark:hover:bg-white dark:hover:text-black"
+              className="border-2 px-6 py-2 rounded-md font-bold hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black"
             >
               PLACE ORDER
             </button>

@@ -85,7 +85,7 @@ export default function Products() {
                     loading="lazy"
                     alt={product.name}
                     src={product.image_url}
-                    className={`text-center transition-all overflow-hidden duration-500`}
+                    className={`text-center overflow-hidden`}
                   />
                 </div>
                 <div className={`border-b-2 px-2 font-bold text-center pb-1`}>

@@ -62,7 +62,7 @@ export default function Navigation() {
         </ul>
 
         <ul
-          className={`sm:hidden fixed transition-all duration-500 top-[56px] translate-x-[-100%] left-0 w-[270px] px-[30px] py-[10px] text-[17px] font-semibold overflow-y-auto bg-white dark:bg-black border-gray-300 border-r-2 bottom-0 scrollbar scrollbar-thumb-black ${
+          className={`sm:hidden fixed top-[56px] translate-x-[-100%] left-0 w-[270px] px-[30px] py-[10px] text-[17px] font-semibold overflow-y-auto bg-white dark:bg-black border-gray-300 border-r-2 bottom-0 scrollbar scrollbar-thumb-black ${
             openMenu ? "translate-x-[0%]" : ""
           }`}
         >
