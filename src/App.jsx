@@ -16,6 +16,11 @@ import Product from "./pages/Product-Information";
 import PlaceOrder from "./pages/Place-Order";
 import DataContext from "./Context/DataContext";
 import { useContext, useEffect } from "react";
+import AdminDashboard from "./pages/AdminDashboard";
+import AdminProducts from "./components/AdminProducts";
+import AdminOrders from "./components/AdminOrders";
+import AdminUsers from "./components/AdminUsers";
+import AdminHome from "./components/AdminHome";
 
 export default function App() {
   const { openMenu, setOpenMenu } = useContext(DataContext);
@@ -42,6 +47,12 @@ export default function App() {
       >
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/admin/*" element={<AdminDashboard />}>
+            <Route index element={<AdminHome />} />
+            <Route path="products" element={<AdminProducts />} />
+            <Route path="orders" element={<AdminOrders />} />
+            <Route path="users" element={<AdminUsers />} />
+          </Route>
           <Route path="*" element={<ErrorPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contactUs" element={<ContactUs />} />
@@ -52,7 +63,7 @@ export default function App() {
           <Route path="/orders" element={<Orders />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/cart" element={<Cart />} />
-          <Route path="/productInformation/:id" element={<Product />} />
+          <Route path="/product-information/:id" element={<Product />} />
           <Route path="/placeOrder" element={<PlaceOrder />} />
         </Routes>
       </div>

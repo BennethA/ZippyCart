@@ -1,33 +1,43 @@
 import Hero from "../components/Hero";
 import Services from "../components/Services";
+import CategorySection from "../components/CategorySection";
+import FeaturedProducts from "../components/FeaturedProducts";
+import PromoSection from "../components/PromoSection";
 
 const Home = () => {
   const services = [
     {
       id: 1,
-      name: "Free Shipping",
-      description: "Free Shipping on all orders",
+      name: "Easy Shopping",
+      description: "Find your favourite styles without the hassle.",
     },
     {
       id: 2,
-      name: "Customer Support 24/7",
-      description: "Instant access to support",
+      name: "Fast Delivery",
+      description: "Get your orders delivered quickly and conveniently.",
     },
     {
       id: 3,
-      name: "100% Secure Payment",
-      description: "We ensure your money is safe",
+      name: "Secure Payment",
+      description: "Shop confidently with a secure checkout experience.",
     },
     {
       id: 4,
-      name: "Money Back Guarantee",
-      description: "30 Days Money Back Guarantee",
+      name: "Easy Returns",
+      description: "Shop with confidence with our simple return policy.",
     },
   ];
 
   return (
-    <main className="p-3 mb-5 flex flex-col items-center gap-12 pt-[45px]">
+    <main className="min-h-screen bg-white pb-16 pt-6 transition-colors duration-300 dark:bg-[#0d0d0d] sm:pt-8">
       <Hero />
+
+      <CategorySection />
+
+      <FeaturedProducts />
+
+      <PromoSection />
+      
       <Services services={services} />
     </main>
   );

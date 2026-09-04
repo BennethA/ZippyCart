@@ -4,29 +4,98 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  /* transition: all; */
-  font-family: "Outfit";
-  box-sizing: border-box;
-  /* transition-duration: 0.1s; */
-}*/
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-#prata-regular {
-  font-weight: 400;
-  font-style: normal;
-  font-family: "Prata", serif;
-} 
+  html {
+    scroll-behavior: smooth;
+  }
 
+  body {
+    font-family: "Outfit", sans-serif;
+    background: #ffffff;
+    color: #111111;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .dark body {
+    background: #0d0d0d;
+    color: #ffffff;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: #2563eb;
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .font-prata {
+    font-family: "Prata", serif;
+  }
+
+  .section-container {
+    @apply mx-auto w-full max-w-[1400px] px-4 sm:px-6 lg:px-8;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center justify-center rounded-full bg-[#111111] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#2563eb] hover:shadow-lg hover:shadow-blue-500/20 dark:bg-white dark:text-black dark:hover:bg-[#2563eb] dark:hover:text-white;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center justify-center rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-900 transition-all duration-300 hover:border-[#2563eb] hover:text-[#2563eb] dark:border-white/10 dark:bg-transparent dark:text-white;
+  }
+}
+
+/* Smooth scrollbar */
 .my-scrollbar::-webkit-scrollbar {
-  height: 15px;
+  width: 6px;
+  height: 6px;
 }
 
 .my-scrollbar::-webkit-scrollbar-thumb {
-  background: #000;
+  background: #cfcfcf;
+  border-radius: 999px;
 }
 
 .my-scrollbar::-webkit-scrollbar-track {
-  background: white;
+  background: transparent;
+}
+
+/* Hide scrollbar while keeping horizontal scrolling */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Better focus accessibility */
+:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+}
+
+/* Smooth image rendering */
+img {
+  max-width: 100%;
+  display: block;
 }
